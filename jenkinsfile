@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     environment {
-        APP_USERNAME = 'your_username'
-        APP_PASSWORD = 'your_password'
+        APP_USERNAME = 'mrzee@gmail.com'
+        APP_PASSWORD = 'ziA@9566,'
     }
 
     stages {
