@@ -19,17 +19,17 @@ pipeline {
             }
         }
     }
-}
 
-post {
-    always {
-        publishHTML([
-            allowMissing: false,
-            alwaysLinkToLastBuild: true,
-            keepAll: true,
-            reportDir: 'reports',
-            reportFiles: 'report.html',
-            reportName: 'Pytest Report'
-        ])
+    post {
+        always {
+            publishHTML([
+                allowMissing: false,
+                alwaysLinkToLastBuild: true,
+                keepAll: true,
+                reportDir: 'reports',
+                reportFiles: 'report.html',
+                reportName: 'Pytest Report'
+            ])
+        }
     }
 }
