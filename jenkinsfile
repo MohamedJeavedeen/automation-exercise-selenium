@@ -1,38 +1,22 @@
 pipeline {
     agent any
 
+    environment {
+        APP_USERNAME = 'your_username'
+        APP_PASSWORD = 'your_password'
+    }
+
     stages {
-
-        stage('Checkout') {
-            steps {
-                echo 'Code checked out from Git'
-            }
-        }
-
         stage('Install Dependencies') {
             steps {
                 bat 'pip install -r requirements.txt'
             }
         }
 
-        stage('Run Pytest Tests') {
+        stage('Run Tests') {
             steps {
                 bat 'pytest -v'
             }
-        }
-    }
-
-    post {
-        always {
-            echo 'Pipeline execution completed'
-        }
-
-        success {
-            echo 'Build Passed'
-        }
-
-        failure {
-            echo 'Build Failed'
         }
     }
 }
