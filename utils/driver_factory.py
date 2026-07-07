@@ -31,7 +31,7 @@ class DriverFactory:
             options.add_argument("--disable-infobars")
             options.add_argument("--disable-extensions")
             if ConfigReader.is_headless():
-                options.add_argument("--headless=new")
+                #options.add_argument("--headless=new")
                 options.add_argument("--window-size=1920,1080")
 
             service = ChromeService(ChromeDriverManager().install())
