@@ -1,0 +1,9 @@
+config/credentials.env
+reports/
+screenshots/
+logs/
+__pycache__/
+*.pyc
+.pytest_cache/
+venv/
+.env
